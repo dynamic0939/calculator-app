@@ -5,7 +5,7 @@ let operator = null;
 let shouldResetDisplay = false;
 
 function updateDisplay() {
-    display.textContent = currentInput;
+    display.value = currentInput;
 }
 
 function appendNumber(num) {
@@ -64,7 +64,7 @@ function calculate() {
             return;
     }
 
-    currentInput = Math.round(result * 100000000) / 100000000;
+    currentInput = Math.round(result * 100000000) / 100000000; // Avoid floating point errors
     operator = null;
     shouldResetDisplay = true;
     updateDisplay();
@@ -87,6 +87,7 @@ function deleteLast() {
     updateDisplay();
 }
 
+// Keyboard support
 document.addEventListener('keydown', (e) => {
     if (e.key >= '0' && e.key <= '9') appendNumber(e.key);
     if (e.key === '+' || e.key === '-' || e.key === '*' || e.key === '/') {
