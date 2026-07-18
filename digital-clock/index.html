@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock - Multiple Time Zones</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="clock-container">
+        <h1>World Clock</h1>
+        <p class="subtitle">Current Time Across Time Zones</p>
+        
+        <div class="clocks-grid">
+            <!-- New York -->
+            <div class="clock-card">
+                <div class="timezone-name">New York</div>
+                <div class="timezone-code">EST/EDT (UTC-5/-4)</div>
+                <div class="digital-clock" id="ny-clock">00:00:00</div>
+                <div class="date" id="ny-date"></div>
+            </div>
+
+            <!-- London -->
+            <div class="clock-card">
+                <div class="timezone-name">London</div>
+                <div class="timezone-code">GMT/BST (UTC+0/+1)</div>
+                <div class="digital-clock" id="london-clock">00:00:00</div>
+                <div class="date" id="london-date"></div>
+            </div>
+
+            <!-- Paris -->
+            <div class="clock-card">
+                <div class="timezone-name">Paris</div>
+                <div class="timezone-code">CET/CEST (UTC+1/+2)</div>
+                <div class="digital-clock" id="paris-clock">00:00:00</div>
+                <div class="date" id="paris-date"></div>
+            </div>
+
+            <!-- Dubai -->
+            <div class="clock-card">
+                <div class="timezone-name">Dubai</div>
+                <div class="timezone-code">GST (UTC+4)</div>
+                <div class="digital-clock" id="dubai-clock">00:00:00</div>
+                <div class="date" id="dubai-date"></div>
+            </div>
+
+            <!-- Tokyo -->
+            <div class="clock-card">
+                <div class="timezone-name">Tokyo</div>
+                <div class="timezone-code">JST (UTC+9)</div>
+                <div class="digital-clock" id="tokyo-clock">00:00:00</div>
+                <div class="date" id="tokyo-date"></div>
+            </div>
+
+            <!-- Sydney -->
+            <div class="clock-card">
+                <div class="timezone-name">Sydney</div>
+                <div class="timezone-code">AEDT/AEST (UTC+10/+11)</div>
+                <div class="digital-clock" id="sydney-clock">00:00:00</div>
+                <div class="date" id="sydney-date"></div>
+            </div>
+
+            <!-- Los Angeles -->
+            <div class="clock-card">
+                <div class="timezone-name">Los Angeles</div>
+                <div class="timezone-code">PST/PDT (UTC-8/-7)</div>
+                <div class="digital-clock" id="la-clock">00:00:00</div>
+                <div class="date" id="la-date"></div>
+            </div>
+
+            <!-- Singapore -->
+            <div class="clock-card">
+                <div class="timezone-name">Singapore</div>
+                <div class="timezone-code">SGT (UTC+8)</div>
+                <div class="digital-clock" id="singapore-clock">00:00:00</div>
+                <div class="date" id="singapore-date"></div>
+            </div>
+
+            <!-- Local Time -->
+            <div class="clock-card highlight">
+                <div class="timezone-name">Your Local Time</div>
+                <div class="timezone-code" id="local-tz"></div>
+                <div class="digital-clock" id="local-clock">00:00:00</div>
+                <div class="date" id="local-date"></div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="btn" onclick="toggleFormat()">Toggle 12/24 Hour</button>
+            <button class="btn" onclick="toggleSeconds()">Toggle Seconds</button>
+        </div>
+
+        <div class="info">
+            <p>⏰ All times update in real-time</p>
+            <p>🌍 Times adjust automatically for daylight saving</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
